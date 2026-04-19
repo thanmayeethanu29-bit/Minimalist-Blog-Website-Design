@@ -23,29 +23,29 @@ body {
     font-family: 'Segoe UI', sans-serif;
     background-color: var(--bg-color);
     color: var(--text-color);
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 /* HEADER */
 header {
     text-align: center;
-    padding: 40px;
+    padding: 30px 20px;
     background: rgb(225, 215, 215);
-    border-bottom: 5px solid #ddd;
+    border-bottom: 4px solid #ddd;
 }
 
 header h1 {
     font-weight: 500;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 /* NAV */
 nav {
-    margin-top: 20px;
+    margin-top: 15px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px 20px;
+    gap: 10px 15px;
 }
 
 nav a {
@@ -62,36 +62,48 @@ nav a.active {
 .container {
     max-width: 900px;
     margin: auto;
-    padding: 40px 20px;
+    padding: 30px 15px;
 }
 
 /* ABOUT BOX */
 .about-content {
     background: var(--card-bg);
-    padding: 40px;
+    padding: 25px;
     border-radius: 10px;
 }
 
 /* PROFILE */
 .profile {
     display: flex;
-    gap: 2rem;
+    flex-direction: column;   /* MOBILE FIRST */
     align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    text-align: center;
+    gap: 20px;
 }
 
-/* FIXED IMAGE */
+/* Desktop only */
+@media (min-width: 768px) {
+    .profile {
+        flex-direction: row;
+        text-align: left;
+        justify-content: center;
+    }
+}
+
+/* IMAGE */
 .profile-image img {
-    width: 180px;
-    height: auto;
+    width: 150px;
     border-radius: 10px;
 }
 
 /* TEXT */
+.profile-info {
+    max-width: 400px;
+}
+
 .profile-info h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
 }
 
 .profile-info p {
@@ -102,71 +114,59 @@ nav a.active {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 1rem;
+    margin-top: 20px;
 }
 
+/* NORMAL TABLE (DESKTOP) */
 th, td {
     border: 1px solid #ddd;
-    padding: 12px;
+    padding: 10px;
     text-align: center;
 }
 
-th {
-    background-color: #f2f2f2;
-}
+/* MOBILE TABLE FIX */
+@media (max-width: 600px) {
 
-/* FOOTER */
-footer {
-    background: var(--accent-color);
-    color: white;
-    text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
-}
-
-/* ===== RESPONSIVE ===== */
-
-/* Tablet */
-@media (max-width: 768px) {
-
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    .profile {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-image img {
-        width: 140px;
-        border-radius: 10px;
-    }
-
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-
-    header {
-        padding: 25px;
-    }
-
-    nav a {
-        font-size: 13px;
-    }
-
-    .about-content {
-        padding: 20px;
-    }
-
-    table, tr, td, th {
+    table, thead, tbody, th, td, tr {
         display: block;
         width: 100%;
     }
 
-    tr {
-        margin-bottom: 15px;
+    thead {
+        display: none;
     }
 
+    tr {
+        margin-bottom: 15px;
+        background: white;
+        padding: 10px;
+        border-radius: 8px;
+    }
+
+    td {
+        text-align: left;
+        padding: 8px;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+
+    td::before {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+        color: #000;
+    }
+
+    td:nth-child(1)::before { content: "Category"; }
+    td:nth-child(2)::before { content: "Description"; }
+    td:nth-child(3)::before { content: "Uses"; }
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
 }
