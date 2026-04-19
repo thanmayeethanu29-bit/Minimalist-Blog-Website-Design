@@ -3,10 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Image fix */
 img {
     max-width: 100%;
     height: auto;
 }
+
 :root {
     --bg-color: #fafafa;
     --text-color: #333;
@@ -72,15 +75,17 @@ nav a.active {
 /* PROFILE */
 .profile {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
-    margin-bottom: 3rem;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
+/* FIXED IMAGE */
 .profile-image img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+    width: 180px;
+    height: auto;
+    border-radius: 10px;
 }
 
 /* TEXT */
@@ -134,9 +139,8 @@ footer {
     }
 
     .profile-image img {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
+        width: 140px;
+        border-radius: 10px;
     }
 
 }
@@ -149,7 +153,7 @@ footer {
     }
 
     nav a {
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .about-content {
