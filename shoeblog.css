@@ -135,13 +135,11 @@ button:hover {
 
 /* Footer */
 footer {
-    background: #111;
+    background: var(--accent-color);
     color: white;
     text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    font-size: 14px;
-}
+    padding: 2rem;
+    margin-top: 3rem;
 
 /* ===== RESPONSIVE ===== */
 
