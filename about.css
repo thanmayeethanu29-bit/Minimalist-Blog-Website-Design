@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+:root {
+    --bg-color: #fafafa;
+    --text-color: #333;
+    --accent-color: #2d2d2d;
+    --secondary-text: #666;
+    --card-bg: #ffffff;
+}
+
+/* BODY */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 40px;
+    background: rgb(225, 215, 215);
+    border-bottom: 5px solid #ddd;
+}
+
+header h1 {
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+/* NAV */
+nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-size: 14px;
+}
+
+nav a.active {
+    border-bottom: 2px solid black;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+/* ABOUT BOX */
+.about-content {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+/* PROFILE */
+.profile {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* TEXT */
+.profile-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.profile-info p {
+    color: var(--secondary-text);
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* FOOTER */
+footer {
+    background: var(--accent-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+    header {
+        padding: 25px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .about-content {
+        padding: 20px;
+    }
+
+    table, tr, td, th {
+        display: block;
+        width: 100%;
+    }
+
+    tr {
+        margin-bottom: 15px;
+    }
+
+}
