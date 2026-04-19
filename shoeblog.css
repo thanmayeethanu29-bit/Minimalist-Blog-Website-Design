@@ -1,16 +1,28 @@
-
-
+/* Smooth scroll */
 html {
     scroll-behavior: smooth;
 }
 
-body {
+/* Reset + image safety */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Body */
+body {
     font-family: 'Segoe UI', sans-serif;
     background-color: #f4f4f4;
     color: #333;
 }
 
+/* Header */
 header {
     text-align: center;
     padding: 40px;
@@ -18,21 +30,25 @@ header {
     border-bottom: 5px solid #ddd;
     position: sticky;
     top: 0;
+    z-index: 1000; /* fix overlap */
 }
 
 header h1 {
-    margin: 0;
     font-weight: 500;
 }
 
+/* Navbar */
 nav {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 20px;
 }
 
 nav a {
     text-decoration: none;
     color: #0a0a0a;
-    margin: 0 30px;
     font-size: 14px;
 }
 
@@ -40,23 +56,27 @@ nav a:hover {
     color: black;
 }
 
+/* Container */
 .container {
     max-width: 1000px;
     margin: 60px auto;
     padding: 0 20px;
 }
 
+/* Section title */
 .section-title {
     text-align: center;
     margin-bottom: 30px;
 }
 
+/* Grid */
 .shoe-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
+/* Card */
 .shoe-card {
     background: white;
     border-radius: 8px;
@@ -74,6 +94,7 @@ nav a:hover {
     border-radius: 6px;
 }
 
+/* Button */
 button {
     margin-top: 10px;
     padding: 8px 15px;
@@ -88,14 +109,15 @@ button:hover {
     background: #333;
 }
 
-.about,
-.contact {
+/* About & Contact */
+.about, .contact {
     background: white;
     padding: 40px 20px;
     margin-top: 40px;
     border-radius: 8px;
 }
 
+/* Contact form */
 .contact form {
     display: flex;
     flex-direction: column;
@@ -111,11 +133,48 @@ button:hover {
     border-radius: 5px;
 }
 
+/* Footer */
 footer {
     background: #111;
     color: white;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
-    font-size:14px;
+    font-size: 14px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    header {
+        padding: 25px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    .container {
+        margin: 40px auto;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 18px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .container {
+        margin: 30px auto;
+    }
+
 }
