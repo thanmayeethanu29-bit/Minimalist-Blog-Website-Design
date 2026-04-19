@@ -1,0 +1,249 @@
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================= VARIABLES ================= */
+:root {
+    --bg-color: #f5f5f5;
+    --text-color: #333;
+    --accent-color: #222;
+    --card-bg: #ffffff;
+}
+
+/* ================= BODY ================= */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: var(--card-bg);
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #ff4d6d;
+}
+
+/* ================= HEADER ================= */
+header {
+    text-align: center;
+    padding: 30px;
+    background: #eaeaea;
+    border-bottom: 3px solid #ddd;
+}
+
+/* ================= HOME PAGE ================= */
+.home-bg {
+    background-image: url("https://thumbs.dreamstime.com/b/sneaker-3247828.jpg?w=768");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+
+.hero {
+    margin-top: 180px;
+    margin-left: 60px;
+    max-width: 500px;
+}
+
+.hero h2 {
+    font-size: 40px;
+}
+
+.hero p {
+    margin-top: 15px;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #444;
+}
+
+/* ================= CONTAINER ================= */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* ================= COLLECTION ================= */
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.shoe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.shoe-card {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.shoe-card:hover {
+    transform: translateY(-8px);
+}
+
+.shoe-card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* ================= BUTTON ================= */
+button {
+    margin-top: 10px;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #444;
+}
+
+/* ================= ABOUT PAGE ================= */
+.about-content {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.profile {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.profile-image img {
+    width: 180px;
+    border-radius: 10px;
+}
+
+.profile-info p {
+    color: #666;
+}
+
+/* ================= TABLE ================= */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background: #f2f2f2;
+}
+
+tr:hover {
+    background: #f9f9f9;
+}
+
+/* ================= CONTACT ================= */
+.contact-info {
+    margin: 20px 0;
+    line-height: 1.8;
+}
+
+.contact-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.contact-form input[type="submit"] {
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+.contact-form input[type="submit"]:hover {
+    background: #444;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    margin-top: 40px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .hero {
+        margin: 100px 20px;
+    }
+
+    .profile {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

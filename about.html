@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>Home collection About contact </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #fafafa;
+    --text-color: #333;
+    --accent-color: #2d2d2d;
+    --secondary-text: #666;
+    --card-bg: #ffffff;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.8;
+}
+
+/* ===== HEADER (LIKE COLLECTION PAGE) ===== */
+header {
+    text-align: center;
+    padding: 40px;
+    background: rgb(225, 215, 215);
+    border-bottom: 5px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+/* NAVBAR CENTERED */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--accent-color);
+    margin: 0 30px;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: black;
+}
+
+/* ACTIVE LINK */
+nav a.active {
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 5%;
+}
+
+/* ABOUT BOX */
+.about-content {
+    background: var(--card-bg);
+    padding: 4rem;
+}
+
+/* PROFILE */
+.profile {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.profile-image {
+    width: 250px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* PROFILE TEXT */
+.profile-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.profile-info p {
+    color: var(--secondary-text);
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* FOOTER */
+footer {
+    background: var(--accent-color);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ===== NEW HEADER ===== -->
+<header>
+    <h1>Minimalist Shoe Collection</h1>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="shoe blog.html">Collection</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <div class="about-content">
+
+        <div class="profile">
+
+            <div class="profile-image">
+                <img src="profile.jpeg" alt="Thanmay profile photo">
+            </div>
+
+            <div class="profile-info">
+                <h3>Thanmay</h3>
+                <p>
+                    Welcome to my corner. I'm trying to give the best collection out of my shoerack.
+                    My style is Minimal and cutesy.
+                </p>
+            </div>
+
+        </div>
+
+        <h2>SHOE TABLE</h2>
+
+        <table>
+
+            <tr>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Uses</th>
+            </tr>
+
+            <tr>
+                <td>Baya Platform clog</td>
+                <td>Best platforms for everyday usage and durable.</td>
+                <td>Everyday usage</td>
+            </tr>
+
+            <tr>
+                <td>Heels</td>
+                <td>Fashionable and matches every dress.</td>
+                <td>Dresses</td>
+            </tr>
+
+            <tr>
+                <td>Ankle boots</td>
+                <td>Best for casual wear.</td>
+                <td>Casual wear</td>
+            </tr>
+
+            <tr>
+                <td>Knee high boots</td>
+                <td>Perfect for styling and comfort.</td>
+                <td>Skirts, Dresses</td>
+            </tr>
+
+            <tr>
+                <td>Nike women running shoes</td>
+                <td>Perfect for running and hiking.</td>
+                <td>Morning run, Walks</td>
+            </tr>
+
+            <tr>
+                <td>Nike women slides</td>
+                <td>Very comfortable everyday use.</td>
+                <td>Everyday usage</td>
+            </tr>
+
+        </table>
+
+        <h3 style="margin-top:20px;">Thank you</h3>
+
+    </div>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Minimal Shoe Blog | Designed by Thanmay</p>
+</footer>
+
+</body>
+</html>

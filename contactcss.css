@@ -1,0 +1,76 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* ===== HEADER (SAME AS COLLECTION PAGE) ===== */
+header {
+    text-align: center;
+    padding: 40px;
+    background: rgb(225, 215, 215);
+    border-bottom: 5px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* NAVBAR */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 25px;
+    color: black;
+    font-weight: normal;
+}
+
+/* Active link */
+nav a.active {
+    font-weight: normal;
+    border-bottom: 2px solid black;
+}
+
+/* Table */
+table {
+    margin: 40px auto;
+    border: 5px solid black;
+    background: lightblue;
+    border-radius: 10px;
+}
+
+/* Cells */
+td {
+    padding: 10px;
+}
+
+/* Inputs */
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Buttons */
+input[type="submit"], input[type="reset"] {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    background: #222;
+    color: white;
+}
+

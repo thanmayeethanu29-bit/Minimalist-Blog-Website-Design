@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact - Shoes</title>
+
+<style>
+
+/* Body */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* ===== HEADER (SAME AS COLLECTION PAGE) ===== */
+header {
+    text-align: center;
+    padding: 40px;
+    background: rgb(225, 215, 215);
+    border-bottom: 5px solid #ddd;
+}
+
+header h1 {
+    margin: 0;
+    font-weight: 500;
+}
+
+/* NAVBAR */
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 25px;
+    color: black;
+    font-weight: normal;
+}
+
+/* Active link */
+nav a.active {
+    font-weight: normal;
+    border-bottom: 2px solid black;
+}
+
+/* Table */
+table {
+    margin: 40px auto;
+    border: 5px solid black;
+    background: lightblue;
+    border-radius: 10px;
+}
+
+/* Cells */
+td {
+    padding: 10px;
+}
+
+/* Inputs */
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Buttons */
+input[type="submit"], input[type="reset"] {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 15px;
+    background: #222;
+    color: white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- ===== NEW HEADER ===== -->
+<header>
+    <h1>Minimalist Shoe Collection</h1>
+
+    <nav>
+        <a href="home.html">Home</a>
+        <a href="shoe blog.html">Collection</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+</header>
+
+<!-- Form -->
+<form>
+
+<table cellspacing="8" cellpadding="8">
+
+<tr>
+<td colspan="2">
+<marquee behavior="alternate"> CONTACT ME </marquee>
+</td>
+</tr>
+
+<tr>
+<td>Name</td>
+<td><input type="text" placeholder="Enter your name"></td>
+</tr>
+
+<tr>
+<td>Email</td>
+<td><input type="email" placeholder="example@gmail.com"></td>
+</tr>
+
+<tr>
+<td>Phone</td>
+<td><input type="text" placeholder="Enter your number"></td>
+</tr>
+
+<tr>
+<td>Contact Method</td>
+<td>
+<select>
+<option>Email</option>
+<option>Phone</option>
+<option>WhatsApp</option>
+</select>
+</td>
+</tr>
+
+<tr>
+<td>Updates</td>
+<td>
+Email <input type="checkbox" checked>
+SMS <input type="checkbox">
+WhatsApp <input type="checkbox">
+</td>
+</tr>
+
+<tr>
+<td>Message</td>
+<td>
+<textarea rows="4" placeholder="Write your message..."></textarea>
+</td>
+</tr>
+
+<tr>
+<td><input type="submit" value="Send"></td>
+<td><input type="reset" value="Clear"></td>
+</tr>
+
+</table>
+
+</form>
+
+<!-- Footer -->
+<footer>
+<p>© 2026 Minimal Shoe Blog | Designed by Thanmay</p>
+</footer>
+
+</body>
+</html>
