@@ -112,8 +112,8 @@ button:hover {
 }
 
 footer {
-    background: #222;       
-    color: white;
+    background: #222;       /* dark like About page */
+    color: black;
     text-align: center;
     padding: 2rem;
     margin-top: 40px;
