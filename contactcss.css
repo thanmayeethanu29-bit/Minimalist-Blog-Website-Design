@@ -4,7 +4,7 @@ body {
     margin: 0;
 }
 
-/* ===== HEADER (SAME AS COLLECTION PAGE) ===== */
+
 header {
     text-align: center;
     padding: 40px;
@@ -74,3 +74,39 @@ footer {
     color: white;
 }
 
+
+@media (max-width: 768px) {
+
+    /* Make table fit mobile */
+    table {
+        width: 95%;
+        font-size: 14px;
+    }
+
+    /* Stack form fields */
+    td {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+    tr {
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    /* Fix navigation spacing */
+    nav a {
+        display: inline-block;
+        margin: 10px;
+    }
+
+    /* Reduce header size */
+    header {
+        padding: 25px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+}
