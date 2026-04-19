@@ -112,11 +112,9 @@ button:hover {
 }
 
 footer {
+    background: #222;       
+    color: white;
     text-align: center;
-    padding: 20px;
+    padding: 2rem;
     margin-top: 40px;
-    background: white;
-    font-size: 14px;
-    color: #777;
 }
-
