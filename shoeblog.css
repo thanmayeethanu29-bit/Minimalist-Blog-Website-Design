@@ -135,19 +135,22 @@ button:hover {
 
 /* Footer */
 footer {
-    background: var(--accent-color);
-    color: white;
+    background: white;           
+    color: #333;                
     text-align: center;
-    padding: 2rem; 
-    margin-top: 3rem;
+    padding: 40px 20px;          
+    margin: 40px auto;           
+    border-radius: 8px;           
+    max-width: 1000px;           
+    width: calc(100% - 40px);    
     font-size: 14px;
-    border-top: 1px solid #444;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
 }
+
 /* RESPONSIVE */
 
 /* Tablet */
 @media (max-width: 768px) {
-
     header {
         padding: 25px;
     }
@@ -159,22 +162,30 @@ footer {
     .container {
         margin: 40px auto;
     }
-
+    
+    footer {
+        max-width: 90%;
+    }
 }
 
 /* Mobile */
 @media (max-width: 480px) {
-
     header h1 {
         font-size: 18px;
     }
 
     nav a {
         font-size: 13px;
+        margin: 0 10px; 
     }
 
     .container {
-        margin: 30px auto;
+        margin: 20px auto;
     }
 
+    footer {
+        margin: 20px auto;
+        padding: 20px;
+        width: 95%;
+    }
 }
