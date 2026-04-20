@@ -1,191 +1,105 @@
-/* Smooth scroll */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Reset + image safety */
+/* RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Body */
 body {
     font-family: 'Segoe UI', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Dark overlay so text is always readable */
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url("https://thumbs.dreamstime.com/b/sneaker-3247828.jpg?w=768");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
 }
 
-/* Header */
 header {
     text-align: center;
-    padding: 40px;
-    background: rgb(225, 215, 215);
-    border-bottom: 5px solid #ddd;
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* fix overlap */
+    padding: 30px 10px;
 }
 
-header h1 {
-    font-weight: 500;
-}
-
-/* Navbar */
 nav {
-    margin-top: 20px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 10px 20px;
+    gap: 15px;
+    margin-top: 15px;
 }
 
 nav a {
+    color: white;
     text-decoration: none;
-    color: #0a0a0a;
     font-size: 14px;
 }
 
-nav a:hover {
-    color: black;
-}
-
-/* Container */
-.container {
-    max-width: 1000px;
-    margin: 60px auto;
-    padding: 0 20px;
-}
-
-/* Section title */
-.section-title {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* Grid */
-.shoe-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-/* Card */
-.shoe-card {
-    background: white;
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.shoe-card:hover {
-    transform: translateY(-8px);
-}
-
-.shoe-card img {
-    width: 100%;
-    border-radius: 6px;
-}
-
-/* Button */
-button {
-    margin-top: 10px;
-    padding: 8px 15px;
-    border: none;
-    background: black;
-    color: white;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background: #333;
-}
-
-/* About & Contact */
-.about, .contact {
-    background: white;
-    padding: 40px 20px;
-    margin-top: 40px;
-    border-radius: 8px;
-}
-
-/* Contact form */
-.contact form {
+.hero {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    max-width: 500px;
-    margin: auto;
-}
-
-.contact input,
-.contact textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-/* Footer */
-footer {
-    background: white;           
-    color: #333;                
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 40px 20px;          
-    margin: 40px auto;           
-    border-radius: 8px;           
-    max-width: 1000px;           
-    width: calc(100% - 40px);    
-    font-size: 14px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
+    padding: 20px;
 }
 
-/* RESPONSIVE */
+.hero h2 {
+    font-size: clamp(22px, 10vw, 45px);
+    text-transform: uppercase;
+}
 
-/* Tablet */
-@media (max-width: 768px) {
-    header {
-        padding: 25px;
-    }
+.hero p {
+    margin: 15px 0;
+    font-size: clamp(14px, 4vw, 18px);
+    max-width: 450px;
+}
 
-    header h1 {
-        font-size: 22px;
-    }
+.btn {
+    padding: 12px 25px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+}
 
-    .container {
-        margin: 40px auto;
+/* THE FOOTER FIX */
+footer {
+    background: #ffffff !important; /* Force White */
+    color: #333333 !important;      /* Force Dark Text */
+    padding: 25px !important;
+    margin: 20px auto !important;
+    text-align: center !important;
+    border-radius: 10px !important;
+    width: 90% !important;
+    max-width: 800px !important;
+    border: 1px solid #ddd !important;
+    display: block !important;
+}
+
+footer p {
+    color: #666 !important;
+    font-size: 13px !important;
+}
+
+/* MOBILE FIXES */
+@media (max-width: 600px) {
+    body {
+        /* On phones, we switch from 'cover' to '100% auto' 
+           to stop the shoe from zooming in too much */
+        background-size: 100% auto; 
+        background-attachment: scroll;
+        background-color: #333; /* Fills bottom if image is short */
     }
     
-    footer {
-        max-width: 90%;
-    }
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 18px;
-    }
-
-    nav a {
-        font-size: 13px;
-        margin: 0 10px; 
-    }
-
-    .container {
-        margin: 20px auto;
-    }
-
-    footer {
-        margin: 20px auto;
-        padding: 20px;
-        width: 95%;
+    .hero {
+        justify-content: flex-start;
+        padding-top: 40px;
     }
 }
