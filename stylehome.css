@@ -1,137 +1,133 @@
+/* Reset + Global */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* VARIABLES (added fix) */
 :root {
-    --accent-color: #222;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --secondary-text: #666;
 }
 
-/* Body with overlay */
-body{
-    font-family: Arial;
+/* Body with background fix */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
     min-height: 100vh;
     display: flex;              
     flex-direction: column;    
-    background:
-    linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
-    url("https://thumbs.dreamstime.com/b/sneaker-3247828.jpg?w=768");
+    background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+        url("https://thumbs.dreamstime.com/b/sneaker-3247828.jpg?w=768");
     background-size: cover;
     background-position: center;
+    background-attachment: fixed; /* Keeps image steady during scroll */
     color: white;
+    overflow-x: hidden;
 }
 
 /* HEADER */
 header {
     text-align: center;
-    padding: 40px;
+    padding: 40px 20px;
     background: transparent;
 }
 
-header h1 {
-    font-weight: 500;
-}
-
-/* NAVBAR */
+/* NAVBAR - Mobile Friendly */
 nav {
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px 20px;
+    gap: 15px 25px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    font-weight: normal;
+    font-size: 14px;
+    transition: 0.3s;
 }
 
-/* Active link */
 nav a.active {
     border-bottom: 2px solid white;
+    padding-bottom: 5px;
 }
 
-/* HERO */
-.hero{
+/* HERO SECTION */
+.hero {
     flex: 1;                     
-    max-width: 600px;
-    margin: 120px auto 40px;
-    padding: 0 16px;
+    max-width: 800px;
+    margin: 10vh auto; /* Relative margin for better centering */
+    padding: 0 20px;
+    text-align: center;
 }
 
-.hero h2{
-    font-size: 42px;
+.hero h2 {
+    font-size: clamp(28px, 8vw, 52px); /* Scales font based on screen size */
+    line-height: 1.2;
 }
 
-.hero p{
-    margin-top: 15px;
+.hero p {
+    margin-top: 20px;
+    font-size: clamp(14px, 4vw, 18px);
     line-height: 1.6;
 }
 
 /* BUTTON */
-.btn{
+.btn {
     display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
+    margin-top: 30px;
+    padding: 12px 30px;
     background: white;
     color: black;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
 }
 
-/* FOOTER (fixed to match all pages) */
+/* FOOTER - Updated to match About box style */
 footer {
-    background: #222;          
-    color: white;
+    background: white !important;    /* White background like About section */
+    color: var(--text-color) !important;
     text-align: center;
-    padding: 2rem;
-    margin-top: 40px;
+    padding: 30px 20px;
+    margin: 40px auto 20px;          /* Centered with space at bottom */
+    border-radius: 10px;
+    max-width: 1000px;
+    width: calc(100% - 40px);        /* Responsive side margins */
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* GLOBAL RESPONSIVE */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* ===== TABLET ===== */
-@media (max-width: 768px) {
-
-  header {
-    padding: 25px;
-  }
-
-  header h1 {
-    font-size: 22px;
-  }
-
-  .hero {
-    margin: 100px auto;
-    text-align: center;
-  }
-
-  .hero h2 {
-    font-size: 28px;
-  }
-
-  .hero p {
+footer p {
+    color: var(--secondary-text);
     font-size: 14px;
-  }
-
 }
 
-/* ===== MOBILE ===== */
+/* RESPONSIVE FIXES */
+@media (max-width: 768px) {
+    header {
+        padding: 30px 15px;
+    }
+
+    .hero {
+        margin: 5vh auto;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+}
+
 @media (max-width: 480px) {
+    .hero {
+        margin: 20px auto;
+    }
 
-  header h1 {
-    font-size: 18px;
-  }
-
-  .hero h2 {
-    font-size: 24px;
-  }
-
+    footer {
+        width: 90%;
+        padding: 20px;
+    }
 }
