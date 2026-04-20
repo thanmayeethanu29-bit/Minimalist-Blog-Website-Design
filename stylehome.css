@@ -1,126 +1,49 @@
-/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --card-bg: #ffffff;
-    --text-color: #333;
-    --secondary-text: #666;
-}
-
-/* Body with background fix */
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     min-height: 100vh;
-    display: flex;              
-    flex-direction: column;    
-    background: 
-        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-        url("https://thumbs.dreamstime.com/b/sneaker-3247828.jpg?w=768");
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; 
-    color: white;
-    overflow-x: hidden;
-}
-
-/* HEADER */
-header {
-    text-align: center;
-    padding: 20px;
-    background: transparent;
-}
-
-/* NAVBAR */
-nav {
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-nav a.active {
-    border-bottom: 2px solid white;
-}
-
-/* HERO SECTION - The Mobile Fix */
-.hero {
-    flex: 1;                     
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 20px;
+    background: 
+        linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+        url("https://thumbs.dreamstime.com/b/sneaker-3247828.jpg?w=768") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* Push footer to bottom */
+.hero {
+    flex: 1; 
+    padding: 100px 20px;
     text-align: center;
 }
 
-.hero h2 {
-    font-size: clamp(24px, 8vw, 48px);
-    line-height: 1.2;
-    text-transform: uppercase;
-}
-
-.hero p {
-    margin-top: 15px;
-    font-size: clamp(14px, 4vw, 18px);
-    max-width: 500px;
-}
-
-/* BUTTON */
-.btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 30px;
-    background: white;
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-/* FOOTER - Matched to About Style */
+/* THE FOOTER FIX */
 footer {
-    background: white !important;
-    color: var(--text-color) !important;
-    text-align: center;
+    background: white !important; 
+    color: #333 !important;       
     padding: 20px;
-    margin: 20px auto;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 1000px;
+    margin: 20px auto;            
+    text-align: center;
+    border-radius: 10px;         
+    width: 90%;                  
+    max-width: 800px;
     border: 1px solid #ddd;
 }
 
-footer p {
-    color: var(--secondary-text);
-    font-size: 12px;
-}
-
-/* MEDIA QUERIES FOR PHONE */
+/* MEDIA QUERY FOR MOBILE */
 @media (max-width: 480px) {
     body {
         
-        background-attachment: scroll; 
+        background-attachment: scroll;
     }
-
-    .hero {
-        padding-top: 60px;
-    }
-
-    header {
-        padding: 10px;
+    
+    .hero h2 {
+        font-size: 28px;
     }
 }
