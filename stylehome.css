@@ -1,4 +1,4 @@
-/* Reset + Global */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +22,7 @@ body {
         url("https://thumbs.dreamstime.com/b/sneaker-3247828.jpg?w=768");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Keeps image steady during scroll */
+    background-attachment: fixed; 
     color: white;
     overflow-x: hidden;
 }
@@ -30,104 +30,97 @@ body {
 /* HEADER */
 header {
     text-align: center;
-    padding: 40px 20px;
+    padding: 20px;
     background: transparent;
 }
 
-/* NAVBAR - Mobile Friendly */
+/* NAVBAR */
 nav {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px 25px;
+    gap: 15px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     font-size: 14px;
-    transition: 0.3s;
 }
 
 nav a.active {
     border-bottom: 2px solid white;
-    padding-bottom: 5px;
 }
 
-/* HERO SECTION */
+/* HERO SECTION - The Mobile Fix */
 .hero {
     flex: 1;                     
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
     max-width: 800px;
-    margin: 10vh auto; /* Relative margin for better centering */
-    padding: 0 20px;
+    margin: 0 auto;
+    padding: 40px 20px;
     text-align: center;
 }
 
 .hero h2 {
-    font-size: clamp(28px, 8vw, 52px); /* Scales font based on screen size */
+    font-size: clamp(24px, 8vw, 48px);
     line-height: 1.2;
+    text-transform: uppercase;
 }
 
 .hero p {
-    margin-top: 20px;
+    margin-top: 15px;
     font-size: clamp(14px, 4vw, 18px);
-    line-height: 1.6;
+    max-width: 500px;
 }
 
 /* BUTTON */
 .btn {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 25px;
     padding: 12px 30px;
     background: white;
     color: black;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    transition: 0.3s;
 }
 
-/* FOOTER - Updated to match About box style */
+/* FOOTER - Matched to About Style */
 footer {
-    background: white !important;    /* White background like About section */
+    background: white !important;
     color: var(--text-color) !important;
     text-align: center;
-    padding: 30px 20px;
-    margin: 40px auto 20px;          /* Centered with space at bottom */
+    padding: 20px;
+    margin: 20px auto;
     border-radius: 10px;
+    width: 90%;
     max-width: 1000px;
-    width: calc(100% - 40px);        /* Responsive side margins */
     border: 1px solid #ddd;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 footer p {
     color: var(--secondary-text);
-    font-size: 14px;
+    font-size: 12px;
 }
 
-/* RESPONSIVE FIXES */
-@media (max-width: 768px) {
-    header {
-        padding: 30px 15px;
-    }
-
-    .hero {
-        margin: 5vh auto;
-    }
-
-    nav a {
-        font-size: 13px;
-    }
-}
-
+/* MEDIA QUERIES FOR PHONE */
 @media (max-width: 480px) {
-    .hero {
-        margin: 20px auto;
+    body {
+        
+        background-attachment: scroll; 
     }
 
-    footer {
-        width: 90%;
-        padding: 20px;
+    .hero {
+        padding-top: 60px;
+    }
+
+    header {
+        padding: 10px;
     }
 }
