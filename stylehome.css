@@ -22,7 +22,7 @@ body {
     flex-direction: column;
 }
 
-/* THE FIX: Move background to a :before layer */
+/* THE MOBILE FIX: Background on a fixed layer */
 body::before {
     content: "";
     position: fixed;
@@ -37,7 +37,7 @@ body::before {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* We don't use 'fixed' here because position: fixed handles it */
+    /* This makes the image cover the whole phone screen without repeating */
 }
 
 header {
